@@ -10,6 +10,13 @@
 	- [Submit password](#submit-password)
 	- [Verify token](#verify-token)
 	
+- [ServiceHistory](#servicehistory)
+	- [Create service history](#create-service-history)
+	- [Delete service history](#delete-service-history)
+	- [Retrieve service histories](#retrieve-service-histories)
+	- [Retrieve service history](#retrieve-service-history)
+	- [Update service history](#update-service-history)
+	
 - [User](#user)
 	- [Create user](#create-user)
 	- [Delete user](#delete-user)
@@ -76,6 +83,84 @@
 
 	GET /password-resets/:token
 
+
+# ServiceHistory
+
+## Create service history
+
+
+
+	POST /service-history
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+| service_type			| 			|  <p>Service history's service_type.</p>							|
+| frequency			| 			|  <p>Service history's frequency.</p>							|
+| reminder			| 			|  <p>Service history's reminder.</p>							|
+
+## Delete service history
+
+
+
+	DELETE /service-history/:id
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+
+## Retrieve service histories
+
+
+
+	GET /service-history
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+| q			| String			| **optional** <p>Query to search.</p>							|
+| page			| Number			| **optional** <p>Page number.</p>							|
+| limit			| Number			| **optional** <p>Amount of returned items.</p>							|
+| sort			| String[]			| **optional** <p>Order of returned items.</p>							|
+| fields			| String[]			| **optional** <p>Fields to be returned.</p>							|
+
+## Retrieve service history
+
+
+
+	GET /service-history/:id
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+
+## Update service history
+
+
+
+	PUT /service-history/:id
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+| service_type			| 			|  <p>Service history's service_type.</p>							|
+| frequency			| 			|  <p>Service history's frequency.</p>							|
+| reminder			| 			|  <p>Service history's reminder.</p>							|
 
 # User
 
